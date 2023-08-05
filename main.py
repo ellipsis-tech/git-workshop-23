@@ -1,6 +1,10 @@
 import unittest
 from Calculator import * # imports the Calculator in Calculator.py into this file
 
+################################################
+## Please edit Calculator.py for this task. 
+## Read below for the test cases
+################################################
 # Test Cases
 class TestAdd(unittest.TestCase):
   def runTest(self):
@@ -25,6 +29,6 @@ class TestDivide(unittest.TestCase):
 class TestDivideByZero(unittest.TestCase):
   def runTest(self):
     result = Calculator.divide(1, 0)
-    self.assertEqual(result, "MATH_ERROR", "should print a MATH_ERROR when dividing by zero.")
+    self.assertEqual(result, "MATH_ERROR", "should return \'MATH_ERROR\'(without quotes) when dividing by zero.")
 
 unittest.main()
