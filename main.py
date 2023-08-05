@@ -1,21 +1,5 @@
 import unittest
-
-class Calculator:
-  # TODO: Write your methods here
-  def add(self, a, b):
-    return 0
-  
-  # TODO: Write your methods here
-  def subtract(self, a, b):
-    return 0
-  
-  # TODO: Write your methods here
-  def multiply(self, a, b):
-    return 0
-    
-  # TODO: Write your methods here
-  def divide(self, a, b):
-    return 0
+from Calculator import * # imports the Calculator in Calculator.py into this file
 
 # Test Cases
 class TestAdd(unittest.TestCase):
@@ -37,5 +21,10 @@ class TestDivide(unittest.TestCase):
   def runTest(self):
     result = Calculator().divide(1, 2)
     self.assertEqual(result, 0.5, "1 / 2 should equal 0.5")
+
+class TestDivideByZero(unittest.TestCase):
+  def runTest(self):
+    result = Calculator.divide(1, 0)
+    self.assertEqual(result, "MATH_ERROR", "should print a MATH_ERROR when dividing by zero.")
 
 unittest.main()
