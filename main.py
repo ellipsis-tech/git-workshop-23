@@ -22,4 +22,9 @@ class TestDivide(unittest.TestCase):
     result = Calculator().divide(1, 2)
     self.assertEqual(result, 0.5, "1 / 2 should equal 0.5")
 
+class TestDivideByZero(unittest.TestCase):
+  def runTest(self):
+    result = Calculator.divide(1, 0)
+    self.assertEqual(result, "MATH_ERROR", "should print a MATH_ERROR when dividing by zero.")
+
 unittest.main()
