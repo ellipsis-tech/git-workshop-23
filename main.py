@@ -1,21 +1,5 @@
 import unittest
-
-class Calculator:
-  # TODO: Write your methods here
-  def add(self, a, b):
-    return 0
-  
-  # TODO: Write your methods here
-  def subtract(self, a, b):
-    return 0
-  
-  # TODO: Write your methods here
-  def multiply(self, a, b):
-    return 0
-    
-  # TODO: Write your methods here
-  def divide(self, a, b):
-    return 0
+from Calculator import * # imports the Calculator in Calculator.py into this file
 
 # Test Cases
 class TestAdd(unittest.TestCase):
